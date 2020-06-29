@@ -1,0 +1,87 @@
+/* Common */
+#emp-profile-details, #emp-work-details, .emp-work-data, #comments-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#container {  
+  margin: 20px 10px;
+}
+input {
+  padding: 5px;
+  margin: 10px 10px 10px 0;
+}
+textarea {
+  resize: none;
+  padding: 10px;
+  margin: 10px 10px 10px 0;
+}
+img {
+  background: transparent;
+}
+.caption {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+/* User Profile */
+#emp-profile-details {
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.emp-profile-data{
+  width: 35%;
+  margin:5px 0;
+}
+
+/* Employment details */
+#emp-work-details {
+  flex-direction: column;
+}
+.emp-work-data {
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+.emp-work-comp {
+  margin-right: 10px;
+}
+
+/* Comments section */
+#comments-section {
+  flex-direction: column;
+}
+.comment-data {
+  width: 35%;
+  margin:5px 0;
+}
+#add-comment {
+  margin: 0 0px 0px 5px;
+}
+.edit-comment {
+  margin: 0 5px 10px 5px;
+}
+.delete-comment {
+  margin: 0 0px 10px 0px;
+}
+
+/* Responsive */
+@media only screen and (max-width: 600px) {
+  .emp-profile-data  {
+    width: 95%;
+    margin:5px 0;
+  }
+  .emp-work-data {
+    flex-direction: column;
+    width: 90%;
+  }
+  .comment-data {
+    width: 95%;
+    margin:5px 0;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .comment-data {
+    width: 45%;
+    margin:5px 0;
+  } 
+}

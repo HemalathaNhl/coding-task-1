@@ -1,0 +1,40 @@
+<!-- Hemalatha N - Coding Task -->
+
+<div id="container">
+  <form>
+    <div id="emp-profile-details">
+      <h3 class="emp-profile-data"> User details - {{empName}} </h3>
+      <div class="emp-profile-data"><span class="caption">Name:</span><br><input type="text" id="emp-name" [(ngModel)]="empName" name="emp-name" size="30" maxlength="30"></div>
+      <div class="emp-profile-data"><span class="caption">Photograph:</span><br><input type="file" id="emp-pic-file" name="emp-pic-file" (change)="onSelectFile($event)"></div>
+      <div class="emp-profile-data"><img [src]="url" id="emp-photograph" name="emp-photograph" alt="Employee Photograph" width="100px" height="100px"></div>
+      <div class="emp-profile-data"><span class="caption">Age:</span><br><input type="number" id="emp-age" name="emp-age" min=18 max=150></div>
+      <div class="emp-profile-data"><span class="caption">Professional Experience:</span> 
+        <img src="./../assets/images/add-experience.png" title="Add Employment details" id="add-work-experience" name="add-work-experience" alt="Add Employment details" width="35px" height="35px" (click)="addWorkExperience();">
+      </div>
+    </div>	
+    <div id="emp-work-details">
+      <div class="emp-work-data" id="work1">
+        <div class="emp-work-comp org">
+          <div><span class="caption">Organization:</span></div>
+          <textarea id="organization" name="organization" style="width:100px; height:50px;"></textarea>
+        </div>
+        <div class="emp-work-comp from">
+          <div><span class="caption">From:</span></div>
+          <input type="date" name="fromDate">
+        </div>
+        <div class="emp-work-comp to">
+          <div><span class="caption">To:</span></div>
+          <input type="date" name="toDate">
+        </div>
+      </div>    
+    </div>
+    <div id="comments-section">
+      <div class="comment-data"><span class="caption">Comments</span><img src="./../assets/images/add-comment.png" title="Add Comment" id="add-comment" name="add-comment" alt="Add Comment" width="35px" height="35px" (click)="addComment();"></div>
+      <div class="comment-data" id="comment1">
+        <textarea class="comment-text" name="comment-text" style="width:180px; height:50px;"></textarea>
+        <img src="./../assets/images/edit-comment.png" class="edit-comment" title="Edit Comment" name="edit-comment" alt="Edit Comment" width="35px" height="35px" (click)="editComment($event)">
+        <img src="./../assets/images/delete-comment.png" class="delete-comment" title="Delete Comment"  name="delete-comment" alt="Delete Comment" width="35px" height="35px">
+      </div>
+    </div>    
+  </form> 
+</div>
